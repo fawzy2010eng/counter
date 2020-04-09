@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>counter</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+        <style>
+            h3{
+                color: black
+            }
+        </style>
+	</head>
+	<body>
+        <div>
+            <h1>counter</h1>
+            <h3>0</h3>
+            <button>add</button>
+            <button>sub</button>
+        </div>  
+        
+        
+        <script>
+            var h = document.querySelector('h3');
+            var addbtn = document.querySelector('button');
+            addbtn.style.backgroundColor = 'green';
+            var subbtn = document.querySelector('button:last-child');
+            subbtn.style.backgroundColor = 'red';
+            
+            var count = function(){
+                
+            }
+            addbtn.addEventListener('click',function(){
+                var value = parseInt(h.innerHTML)+1;
+                h.textContent = value;
+                if(value > 0){
+                    h.style.color = 'green'
+                }else if(value < 0){
+                    h.style.color = 'red'
+                }else{
+                    h.style.color = 'black'
+                }
+                
+            })
+            
+            subbtn.addEventListener('click',function(){
+                var value = parseInt(h.textContent)-1;
+                h.textContent = value;
+                if(value > 0){
+                    h.style.color = 'green'
+                }else if(value < 0){
+                    h.style.color = 'red'
+                }else{
+                    h.style.color = 'black'
+                }
+                
+            })
+        </script>
+	</body>
+</html>
